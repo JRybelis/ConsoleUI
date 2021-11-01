@@ -20,6 +20,16 @@ namespace ConsoleUI
                 
                 moreGuestsComing = GetInfoFromConsole("Will there be more guests coming to register (yes/no)?");
             } while (moreGuestsComing.ToLower() == "yes");
+
+            Console.WriteLine();
+            Console.WriteLine("Guest parties attending tonight:");
+            foreach (string name in listOfParties)
+            {
+                Console.WriteLine(name);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine($"Total guests: {totalGuests}");
             
             Console.ReadLine();
         }
