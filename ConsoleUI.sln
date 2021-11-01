@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI.csproj", "{E6DC530A-01A0-4679-8612-D5057B45341D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestList", "GuestList.csproj", "{E6DC530A-01A0-4679-8612-D5057B45341D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
