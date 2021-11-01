@@ -8,11 +8,16 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             List<string> listOfParties = new List<string>();
+            int totalGuests = 0;
             string moreGuestsComing = "";
             
             do
             {
-                listOfParties.Add(GetInfoFromConsole("What is the full name of the main guest of this party?"));
+                string leadGuestName = GetInfoFromConsole("What is the full name of the main guest of this party?"); 
+                
+                listOfParties.Add(leadGuestName);
+                totalGuests += GetPartySize();
+                
                 moreGuestsComing = GetInfoFromConsole("Will there be more guests coming to register (yes/no)?");
             } while (moreGuestsComing.ToLower() == "yes");
             
@@ -23,6 +28,19 @@ namespace ConsoleUI
         {
             Console.WriteLine(message);
                 string output = Console.ReadLine();
+            return output;
+        }
+
+        private static int GetPartySize()
+        {
+            bool isValidNumber = false;
+            int output = 0;
+            do
+            {
+                string partySizeText = GetInfoFromConsole("How many people are in the party?");
+                isValidNumber = int.TryParse(partySizeText, out output);
+            } while (isValidNumber == false);
+
             return output;
         }
     }
